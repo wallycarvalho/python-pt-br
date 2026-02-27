@@ -130,3 +130,6 @@ dmypy.json
 # Project-specific
 .env.local
 .env.*.local
+
+# Docs for Agent Planning Tasks
+planning/*
