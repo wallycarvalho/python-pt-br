@@ -13,11 +13,11 @@ imprimir(f"Primeira fruta: {frutas[0]}")
 imprimir(f"Última fruta: {frutas[-1]}")
 
 # Adding elements
-frutas.acrescentar("uva")
+frutas.append("uva")
 imprimir(f"Após acrescentar 'uva': {frutas}")
 
 # Removing elements
-frutas.remover("banana")
+frutas.remove("banana")
 imprimir(f"Após remover 'banana': {frutas}")
 
 # List length
