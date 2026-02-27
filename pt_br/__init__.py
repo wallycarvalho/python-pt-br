@@ -8,6 +8,12 @@ Quick start:
     import pt_br
     imprimir("Olá, Mundo!")
 
+How it works:
+    1. Add 'import pt_br' at the top of your script
+    2. Write Python code using pt-BR keywords
+    3. Run the script normally: python script.py
+    4. The pt-BR code is automatically translated to Python
+
 No build steps, no CLI tools—just pure Python!
 """
 
@@ -15,5 +21,26 @@ __version__ = "0.1.0"
 __author__ = "OpenCode"
 __license__ = "MIT"
 
-# The import hook will be registered when this module is imported
-# by the actual __init__.py implementation in Phase 1
+# Register the import hook when this module is imported
+from .translator import register_translator
+
+register_translator()
+
+# Public API
+from .translator import translate_source
+from .mappings import (
+    PT_BR_TO_PYTHON,
+    PT_BR_KEYWORDS,
+    PT_BR_BUILTINS,
+    PYTHON_TO_PT_BR,
+)
+from .utils import debug_show_translation
+
+__all__ = [
+    "translate_source",
+    "PT_BR_TO_PYTHON",
+    "PT_BR_KEYWORDS",
+    "PT_BR_BUILTINS",
+    "PYTHON_TO_PT_BR",
+    "debug_show_translation",
+]
