@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+"""
+pt-br: A wrapper script to run Portuguese Brazilian Python scripts directly.
+
+Installation:
+    1. Save this script as 'pt-br' (without .py extension)
+    2. Make it executable: chmod +x pt-br
+    3. Add it to your PATH
+    4. Or symlink it somewhere in your PATH
+
+Usage:
+    pt-br script.py [arguments...]
+    
+This allows you to run pt-BR scripts directly without 'python -m pt_br'
+"""
+
+import sys
+import os
+
+# Add the pt_br package to path
+import pt_br
+from pt_br.translator import translate_source
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: pt-br script.py [arguments...]")
+        print("Run a Python script written in Portuguese Brazilian")
+        sys.exit(1)
+
+    script_path = sys.argv[1]
+    
+    if not os.path.exists(script_path):
+        print(f"Error: File '{script_path}' not found")
+        sys.exit(1)
+
+    try:
+        with open(script_path, "r", encoding="utf-8") as f:
+            source = f.read()
+    except Exception as e:
+        print(f"Error reading file: {e}")
+        sys.exit(1)
+
+    translated = translate_source(source)
+
+    # Update sys.argv
+    sys.argv = [script_path] + sys.argv[2:]
+
+    # Create module and execute
+    import types
+    module = types.ModuleType("__main__")
+    module.__file__ = script_path
+    module.__spec__ = None
+
+    try:
+        code = compile(translated, script_path, "exec")
+        exec(code, module.__dict__)
+    except SystemExit as e:
+        sys.exit(e.code)
+    except Exception as e:
+        print(f"Error: {e}")
+        import traceback
+        traceback.print_exc()
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()
