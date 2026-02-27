@@ -241,8 +241,12 @@ def _hook_main_module():
     # Get the main module
     import __main__
 
-    # Check if it was written in pt-BR by looking for pt-BR keywords
+    # Only hook if we have a __file__ and it's not a pytest/test runner
     if hasattr(__main__, "__file__") and __main__.__file__:
+        # Skip hooking if this is a test environment
+        if "pytest" in __main__.__file__ or "test" in __main__.__file__:
+            return
+
         try:
             with open(__main__.__file__, "r", encoding="utf-8") as f:
                 source = f.read()
