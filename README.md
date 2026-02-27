@@ -1,15 +1,32 @@
 # python-pt-br
 
-Write Python code in Portuguese Brazilian (pt-BR)!
+Write Python code in Brazilian Portuguese (pt-BR)!
 
 A Python package that enables developers to write Python code using pt-BR keywords and built-in function names, making Python more accessible for Portuguese-speaking learners.
 
 ## Quick Start
 
+Create a file `hello.py`:
+
 ```python
 import pt_br
 
 imprimir("Olá, Mundo!")
+
+para i em intervalo(5):
+    imprimir(i)
+```
+
+Run it:
+
+```bash
+python -m pt_br hello.py
+```
+
+Or with a specific Python version:
+
+```bash
+python3.13 -m pt_br hello.py
 ```
 
 ## Installation
@@ -44,7 +61,7 @@ para i em intervalo(5):
 ### Runs as Standard Python:
 
 ```bash
-$ python seu_script.py
+$ python -m pt_br seu_script.py
 Número par: 0
 Número ímpar: 1
 Número par: 2
