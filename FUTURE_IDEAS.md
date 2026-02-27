@@ -1,0 +1,7 @@
+- IDE/VSCode support
+- Debugging support
+- linting support
+- string and comment handling
+- generate .ptbr files that compile to .py
+- run small offline SLM to assist with keyword detection for translation. A small translation model could be used to suggest translations for strings and comments in the code, making it easier for developers to maintain multilingual codebases.
+- emphasis on offline capabilities, ensuring that the translation tool can function without requiring constant internet access. This is particularly important for developers working in environments with limited connectivity or those who prefer to work offline for privacy and security reasons.
