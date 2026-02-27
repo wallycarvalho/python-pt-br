@@ -75,11 +75,11 @@ See [documentation](docs/GETTING_STARTED.md) for full list of supported keywords
 
 ### Keywords (16)
 
-`para`, `em`, `se`, `senao`, `enquanto`, `e`, `ou`, `nao`, `verdadeiro`, `falso`, `nulo`, `quebra`, `continua`, `retorna`, `def`, `classe`
+`para`, `em`, `se`, `senao`, `enquanto`, `e`, `ou`, `nao`, `verdadeiro`, `falso`, `nulo`, `quebra`, `continua`, `retorna`, `funcao`, `classe`
 
-### Functions (10+)
+### Functions (20+)
 
-`imprimir()`, `entrada()`, `intervalo()`, `comprimento()`, `lista()`, `inteiro()`, `texto()`, `soma()`, `minimo()`, `maximo()`
+`imprimir()`, `entrada()`, `intervalo()`, `comprimento()`, `lista()`, `tupla()`, `conjunto()`, `dicionario()`, `inteiro()`, `flutuante()`, `texto()`, `soma()`, `minimo()`, `maximo()`, `classifica()`, and more
 
 ## How It Works
 
