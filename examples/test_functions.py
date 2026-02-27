@@ -1,10 +1,10 @@
 """Test: Functions"""
 import pt_br
 
-def dobro(x):
+funcao dobro(x):
     retorna x * 2
 
-def saudacao(nome):
+funcao saudacao(nome):
     imprimir(f"Olá, {nome}!")
 
 # Test function with return
