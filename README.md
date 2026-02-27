@@ -1,6 +1,6 @@
 # python-pt-br
 
-Write Python code in Portuguese Brazilian (pt-BR)!
+Write Python code in Brazilian Portuguese (pt-BR)!
 
 A Python package that enables developers to write Python code using pt-BR keywords and built-in function names, making Python more accessible for Portuguese-speaking learners.
 
