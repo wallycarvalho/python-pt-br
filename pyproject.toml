@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-pt-br"
+version = "0.1.0"
+description = "Write Python code in Brazilian Portuguese (pt-BR)"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Wally Carvalho", email = "qzn2cpm83@mozmail.com"}
+]
+keywords = ["python", "portuguese", "brazilian-portuguese", "education", "learning", "pt-br", "i18n"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Education",
+    "Topic :: Education",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Natural Language :: Portuguese (Brazilian)",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "build>=1.0.0",
+    "twine>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/wallycarvalho/python-pt-br"
+Documentation = "https://github.com/wallycarvalho/python-pt-br/blob/main/docs/GETTING_STARTED.md"
+Repository = "https://github.com/wallycarvalho/python-pt-br"
+Issues = "https://github.com/wallycarvalho/python-pt-br/issues"
+
+[tool.setuptools]
+packages = ["pt_br"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=pt_br --cov-report=html --cov-report=term-missing"
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]

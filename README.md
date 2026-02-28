@@ -1,5 +1,10 @@
 # python-pt-br
 
+[![PyPI version](https://img.shields.io/pypi/v/python-pt-br.svg)](https://pypi.org/project/python-pt-br/)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code Coverage](https://img.shields.io/badge/coverage-69%25-green.svg)](https://github.com/wallycarvalho/python-pt-br)
+
 Write Python code in Brazilian Portuguese (pt-BR)!
 
 A Python package that enables developers to write Python code using pt-BR keywords and built-in function names, making Python more accessible for Portuguese-speaking learners.

@@ -18,7 +18,8 @@ No build steps, no CLI tools—just pure Python!
 """
 
 __version__ = "0.1.0"
-__author__ = "OpenCode"
+__author__ = "Wally Carvalho"
+__author_email__ = "qzn2cpm83@mozmail.com"
 __license__ = "MIT"
 
 # Register the import hook when this module is imported
